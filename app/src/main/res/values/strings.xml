@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Button-counter-Cooper</string>
+    <string name="Increment">Increment</string>
+    <string name="Decrement">Decrement</string>
+    <string name="Reset">Reset</string>
+    <string name="Counter">Counter</string>
 </resources>
