@@ -12,9 +12,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="3dp"
         android:layout_marginEnd="2dp"
-        android:text= "@string/Increment"
-        android:textSize="14sp"
         android:onClick="onClick"
+        android:text="@string/Increment"
+        android:textSize="14sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/ResButton"
         app:layout_constraintEnd_toStartOf="@+id/ResButton"
         app:layout_constraintStart_toStartOf="parent" />
@@ -24,8 +24,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="1dp"
-        android:text="@string/Decrement"
         android:onClick="onClick"
+        android:text="@string/Decrement"
         app:layout_constraintBaseline_toBaselineOf="@+id/ResButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ResButton" />
@@ -35,8 +35,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="92dp"
-        android:text="@string/Reset"
         android:onClick="onClick"
+        android:text="@string/Reset"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/DecButton"
         app:layout_constraintStart_toEndOf="@+id/IncButton" />
@@ -45,13 +45,24 @@
         android:id="@+id/counter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="88dp"
         android:fontFamily="casual"
         android:text="@string/Counter"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="427dp"
+        android:layout_height="215dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.147"
+        app:srcCompat="@drawable/buttoncounterimg" />
 
 </android.support.constraint.ConstraintLayout>

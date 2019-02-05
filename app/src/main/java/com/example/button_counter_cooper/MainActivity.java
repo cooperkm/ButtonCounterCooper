@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -17,7 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button decButton;
     Button resButton;
     TextView counter;
-
+    ImageView secretImage;
 
     // to save state, onSavedInstance state, onRestoreInstanceState
     @Override
@@ -37,6 +38,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         resButton = (Button) findViewById(R.id.ResButton);
         resButton.setOnClickListener(this);
 
+        secretImage = (ImageView) findViewById(R.id.imageView);
+
 
     }
 
@@ -45,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(v == incButton){
             count++;
             counter.setText("" + count);
+
         }
 
         if(v == decButton){
@@ -55,8 +59,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(v == resButton){
             count = 0;
             counter.setText("" + count);
+
+        }
+
+        if(count >= 10){
+            secretImage.setVisibility(View.VISIBLE);
+        }else{
+            secretImage.setVisibility(View.INVISIBLE);
         }
     }
+
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
